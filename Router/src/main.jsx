@@ -32,6 +32,7 @@ import Github, { githubInfoLoader } from './components/Github/Github.jsx'
 //     ]
 //   }
 // ])
+// loader={()=>{}} can do API call here too
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,11 +41,7 @@ const router = createBrowserRouter(
     <Route path='about' element={<About/>}/>
     <Route path='contact' element={<Contact/>}/>
     <Route path='user/:userid' element={<User/>}/>
-    <Route 
-    // loader={()=>{
-
-    // }}
-loader={githubInfoLoader}
+    <Route loader={githubInfoLoader}
 path='github'
      element={<Github/>}/>
 
